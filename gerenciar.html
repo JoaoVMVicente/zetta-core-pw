@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zetta Core - Gerenciar Produtos</title>
+    <link rel="stylesheet" href="assets/css/gerenciar.css">
+</head>
+<body>
+    <app-header></app-header>
+
+    <main class="container manage-page">
+        <h1>Gerenciar produtos</h1>
+        <p class="subtitle">Cadastre novos produtos ou remova os que você criou. Os dados ficam salvos no <code>localStorage</code>.</p>
+
+        <div class="manage-layout">
+            <form id="productForm" class="manage-card" novalidate>
+                <h2>Novo produto</h2>
+
+                <div class="field">
+                    <label for="pNome">Nome</label>
+                    <input type="text" id="pNome" required>
+                </div>
+                <div class="row-2">
+                    <div class="field">
+                        <label for="pPreco">Preço (R$)</label>
+                        <input type="number" id="pPreco" min="0.01" step="0.01" required>
+                    </div>
+                    <div class="field">
+                        <label for="pEstoque">Estoque</label>
+                        <input type="number" id="pEstoque" min="0" step="1" value="1" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="pCategoria">Categoria</label>
+                    <input type="text" id="pCategoria" list="categoriasSugeridas" required>
+                    <datalist id="categoriasSugeridas"></datalist>
+                </div>
+                <div class="field">
+                    <label for="pImagem">URL da imagem</label>
+                    <input type="url" id="pImagem" placeholder="https://...">
+                </div>
+                <div class="field">
+                    <label for="pDescricao">Descrição</label>
+                    <textarea id="pDescricao" rows="3"></textarea>
+                </div>
+
+                <p id="formMessage" class="form-message" role="status"></p>
+                <button type="submit" class="btn-submit">Adicionar produto</button>
+            </form>
+
+            <section class="manage-card">
+                <h2>Produtos cadastrados por você</h2>
+                <div id="customList"></div>
+            </section>
+        </div>
+    </main>
+
+    <app-footer></app-footer>
+</body>
+<script type="module" src="assets/js/app.js"></script>
+<script type="module" src="assets/js/gerenciar.js"></script>
+</html>

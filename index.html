@@ -17,11 +17,25 @@
                 </div>
             </section>
 
-            <section class="container products-container">
+            <section class="container about-section" id="sobre">
+                <div class="about-grid">
+                    <div><h3>Preço competitivo</h3><p>Hardware e periféricos com os melhores valores do mercado.</p></div>
+                    <div><h3>Compra segura</h3><p>Pagamento protegido e garantia de 30 dias em todos os produtos.</p></div>
+                    <div><h3>Frete grátis</h3><p>Entrega sem custo em todo o Brasil.</p></div>
+                </div>
+            </section>
+
+            <section class="container products-container" id="produtos">
                 <div class="products-header">
                     <div>
                         <h2>Produtos em Destaque</h2>
                         <p>Os melhores produtos selecionados para você</p>
+                    </div>
+                    <div class="products-filters">
+                        <input type="search" id="searchInput" placeholder="Buscar produto..." aria-label="Buscar produto">
+                        <select id="categoryFilter" aria-label="Filtrar por categoria">
+                            <option value="">Todas as categorias</option>
+                        </select>
                     </div>
                 </div>
                 <div class="products-list" id="productsList"></div>

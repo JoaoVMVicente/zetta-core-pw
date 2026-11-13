@@ -8,7 +8,7 @@ if (form) {
     event.preventDefault();
 
     const nome = document.querySelector('#name-reg')?.value.trim() || '';
-    const email = emailInput?.value.trim() || '';
+    const email = (emailInput?.value.trim() || '').toLowerCase();
     const senha = senhaInput?.value || '';
     const confirmarSenha = confirmarSenhaInput?.value || '';
 

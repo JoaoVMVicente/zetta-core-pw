@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zetta Core - Relatório do LocalStorage</title>
+    <link rel="stylesheet" href="assets/css/relatorio.css">
+</head>
+<body>
+    <app-header></app-header>
+
+    <main class="container report-page">
+        <div class="report-heading">
+            <div>
+                <h1>Relatório de dados armazenados</h1>
+                <p>Tudo o que esta loja guarda no <code>localStorage</code> do seu navegador.</p>
+            </div>
+            <div class="report-actions">
+                <button type="button" class="btn-outline" id="btnExport">Exportar JSON</button>
+                <button type="button" class="btn-danger" id="btnClearAll">Limpar tudo</button>
+            </div>
+        </div>
+
+        <section class="stats" id="stats" aria-label="Resumo"></section>
+
+        <section class="report-card">
+            <h2>Usuários cadastrados</h2>
+            <div id="usersTable"></div>
+        </section>
+
+        <section class="report-card">
+            <h2>Sessão atual</h2>
+            <div id="sessionBox"></div>
+        </section>
+
+        <section class="report-card">
+            <h2>Itens no carrinho</h2>
+            <div id="cartTable"></div>
+        </section>
+
+        <section class="report-card">
+            <h2>Histórico de compras</h2>
+            <div id="purchasesTable"></div>
+        </section>
+
+        <section class="report-card">
+            <h2>Produtos cadastrados por você</h2>
+            <div id="productsTable"></div>
+        </section>
+
+        <section class="report-card">
+            <h2>Chaves brutas do localStorage</h2>
+            <div id="rawTable"></div>
+        </section>
+    </main>
+
+    <app-footer></app-footer>
+</body>
+<script type="module" src="assets/js/app.js"></script>
+<script type="module" src="assets/js/relatorio.js"></script>
+</html>

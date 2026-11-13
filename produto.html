@@ -62,7 +62,7 @@
             document.getElementById('productImg').alt = product.nome;
             document.getElementById('productTitle').textContent = product.nome;
             document.getElementById('productPrice').textContent = `R$ ${product.preco.toFixed(2).replace('.', ',')}`;
-            document.getElementById('productDescription').textContent = product.descricao;
+            document.getElementById('productDescription').textContent = product.descricao || 'Produto de alta qualidade da Zetta Core, com garantia e envio rápido.';
             document.getElementById('productTag').textContent = product.categoria;
 
             const addToCartBtn = document.getElementById('addToCartBtn');

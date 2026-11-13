@@ -45,7 +45,7 @@ function login(email, senha) {
     return { success: false, message: 'E-mail ou senha incorretos.' };
   }
 
-  const user = { email: normalizedEmail };
+  const user = { email: normalizedEmail, nome: registered.nome };
   saveLoggedUser(user);
 
   return { success: true, message: 'Login efetuado com sucesso.', user };
